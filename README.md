@@ -16,11 +16,10 @@
 
 This document provides guidelines and examples for @ccount@bility Web APIs, encouraging consistency, maintainability, and best practices across applications. @ccount@bility APIs aim to balance a truly RESTful API interface with a positive developer experience (DX).
 
-This document borrows heavily from:
-* [Designing HTTP Interfaces and RESTful Web Services](https://www.youtube.com/watch?v=zEyg0TnieLg)
-* [API Facade Pattern](http://apigee.com/about/resources/ebooks/api-fa%C3%A7ade-pattern), by Brian Mulloy, Apigee
-* [Web API Design](http://pages.apigee.com/web-api-design-ebook.html), by Brian Mulloy, Apigee
-* [Fielding's Dissertation on REST](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+
+The @ccount@bility API is delivered making use of Swagger to assist with documentation and to provide a simple test interface.
+
+* ##The @ccount@iliityAPI  (http://54.169.54.195/swagger/ui/index)
 
 ## Pragmatic REST
 
