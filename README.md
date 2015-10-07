@@ -1,4 +1,4 @@
-# @TEST@ Web API Standards
+# @ccount@bility Web API Standards
 
 * [Guidelines](#guidelines)
 * [Pragmatic REST](#pragmatic-rest)
@@ -14,7 +14,7 @@
 
 ## Guidelines
 
-This document provides guidelines and examples for TEST Web APIs, encouraging consistency, maintainability, and best practices across applications. @TEST@ APIs aim to balance a truly RESTful API interface with a positive developer experience (DX).
+This document provides guidelines and examples for @ccount@bility Web APIs, encouraging consistency, maintainability, and best practices across applications. @ccount@bility APIs aim to balance a truly RESTful API interface with a positive developer experience (DX).
 
 This document borrows heavily from:
 * [Designing HTTP Interfaces and RESTful Web Services](https://www.youtube.com/watch?v=zEyg0TnieLg)
@@ -27,8 +27,8 @@ This document borrows heavily from:
 These guidelines aim to support a truly RESTful API. Here are a few exceptions:
 * Put the version number of the API in the URL (see examples below). Don’t accept any requests that do not specify a version number.
 * Allow users to request formats like JSON or XML like this:
-    * http://@TEST@.com/api/v1/clients.json
-    * http://@TEST@.com/api/v1/clients.xml
+    * http://@ccount@bility.com/api/v1/clients.json
+    * http://@ccount@bility.com/api/v1/clients.xml
 
 ## RESTful URLs
 
@@ -47,30 +47,30 @@ These guidelines aim to support a truly RESTful API. Here are a few exceptions:
 
 ### Good URL examples
 * List of clients:
-    * GET http://www.@TEST@.com/api/v1/clients.json
+    * GET http://www.@ccount@bility.com/api/v1/clients.json
 * Filtering is a query:
-    * GET http://www.@TEST@.com/api/v1/clients.json?company=20&sort=desc
-    * GET http://www.@TEST@.com/api/v1/clients.json?topic=economy&year=2011
+    * GET http://www.@ccount@bility.com/api/v1/clients.json?company=20&sort=desc
+    * GET http://www.@ccount@bility.com/api/v1/jobs.json?client=20&company=11
 * A single client in JSON format:
-    * GET http://www.@TEST@.com/api/v1/clients/1234.json
-* All articles in (or belonging to) this client:
-    * GET http://www.@TEST@.com/api/v1/clients/1234/articles.json
-* All articles in this client in XML format:
-    * GET http://example.gov/api/v1/clients/1234/articles.xml
+    * GET http://www.@ccount@bility.com/api/v1/clients/1234.json
+* All jobs in (or belonging to) this client:
+    * GET http://www.@ccount@bility.com/api/v1/clients/1234/jobs.json
+* All jobs in this client in XML format:
+    * GET http://www.@ccount@bility.com/api/v1/clients/1234/jobs.xml
 * Specify optional fields in a comma separated list:
-    * GET http://www.@TEST@.com/api/v1/clients/1234.json?fields=title,subtitle,date
-* Add a new article to a particular client:
-    * POST http://example.gov/api/v1/clients/1234/articles
+    * GET http://www.@ccount@bility.com/api/v1/clients/1234.json?fields=Currency,Company,ClientManager
+	* Add a new job to a particular client:
+    * POST http://www.@ccount@bility.com/api/v1/clients/1234/jobs
 
 ### Bad URL examples
 * Non-plural noun:
-    * http://www.@TEST@.com/client
-    * http://www.@TEST@.com/client/1234
-    * http://www.@TEST@.com/publisher/client/1234
+    * http://www.@ccount@bility.com/client
+    * http://www.@ccount@bility.com/client/1234
+    * http://www.@ccount@bility.com/company/client/1234
 * Verb in URL:
-    * http://www.@TEST@.com/client/1234/create
+    * http://www.@ccount@bility.com/client/1234/create
 * Filter outside of query string
-    * http://www.@TEST@.com/clients/2011/desc
+    * http://www.@ccount@bility.com/jobs/2011/desc
 
 ## HTTP Verbs
 
@@ -122,7 +122,7 @@ Error responses should include a common HTTP status code, message for the develo
        suggestions about how to solve their problems here",
       "userMessage" : "This is a message that can be passed along to end-users, if needed.",
       "errorCode" : "444444",
-      "moreInfo" : "http://www.@TEST@.com/developer/path/to/help/for/444444,
+      "moreInfo" : "http://www.@ccount@bility.com/developer/path/to/help/for/444444,
        http://drupal.org/node/444444",
     }
 
@@ -168,11 +168,11 @@ Information about record limits and total available count should also be include
 
   - [GET /clients](#get-clients)
   - [GET /clients/[id]](#get-clientsid)
-  - [POST /clients/[id]/articles](#post-clientsidarticles)
+  - [POST /clients/[id]/jobs](#post-clientsidjobs)
 
 ### GET /clients
 
-Example: http://example.gov/api/v1/clients.json
+Example: http://@account@bility.com/api/v1/clients.json
 
 Response body:
 
@@ -219,7 +219,7 @@ Response body:
 
 ### GET /clients/[id]
 
-Example: http://example.gov/api/v1/clients/[id].json
+Example: http://@account@bility.com/api/v1/clients/[id].json
 
 Response body:
 
@@ -238,7 +238,7 @@ Response body:
 
 ### POST /clients/[id]/articles
 
-Example: Create – POST  http://example.gov/api/v1/clients/[id]/articles
+Example: Create – POST  http://@account@bility.com/api/v1/clients/[id]/articles
 
 Request body:
 
