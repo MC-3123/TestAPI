@@ -19,7 +19,7 @@ This document provides guidelines and examples for @ccount@bility Web APIs, enco
 
 The @ccount@bility API is delivered making use of Swagger to assist with documentation and to provide a simple test interface.
 
-* ##The @ccount@iliityAPI  (http://54.169.54.195/swagger/ui/index)
+##The @ccount@iliityAPI  (http://54.169.54.195/swagger/ui/index)
 
 ## Pragmatic REST
 
